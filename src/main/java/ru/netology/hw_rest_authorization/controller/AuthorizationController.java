@@ -3,7 +3,6 @@ package ru.netology.hw_rest_authorization.controller;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import ru.netology.hw_rest_authorization.model.User;
 import ru.netology.hw_rest_authorization.service.Authorities;
