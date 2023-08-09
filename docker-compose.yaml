@@ -1,0 +1,8 @@
+version: '17'
+
+services:
+  app17:
+    image: 'myapp17'
+    build: ./
+    ports:
+      - '8080:8080'
