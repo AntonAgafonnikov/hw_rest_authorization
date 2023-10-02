@@ -1,5 +1,7 @@
 package ru.netology.hw_rest_authorization.controller;
 
+import jakarta.annotation.security.RolesAllowed;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -28,6 +30,7 @@ public class AuthorizationController {
     // user password
     // ben 1234
     @GetMapping("/create-post")
+    @Secured({"ROLE_WRITE"})
     public String createPost() {
         return "Welcome, writer!";
     }
@@ -37,6 +40,7 @@ public class AuthorizationController {
     // user password
     // sam  qwerty
     @GetMapping("/read-post")
+    @RolesAllowed({"READ"})
     public String readPost() {
         return "Welcome, user! (There is a very interesting text here)";
     }
